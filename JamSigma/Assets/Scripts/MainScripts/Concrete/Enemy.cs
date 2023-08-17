@@ -95,11 +95,14 @@ public class Enemy : MonoBehaviour, IDamageable<int>, IKillable, IAttack<int>
 
     public void TakeFistAnimation()
     {
+        // RAKİBİN acı çekme sesi VE KARAKTERİMİZİN YUMRUK SESİ (TakeFistAnimation'U VEYA SADECE BU SESİ EVENT İLE YAP)
         enemyAnim.SetTrigger("TakeFistEnemy");
     }
 
     public void TakeKickAnimation()
     {
+        // RAKİBİN acı çekme sesi VE KARAKTERİMİZİN YUMRUK SESİ (TakeKickAnimation'U VEYA SADECE BU SESİ EVENT İLE YAP)
+
         enemyAnim.SetTrigger("TakeKickEnemy");
     }
 
