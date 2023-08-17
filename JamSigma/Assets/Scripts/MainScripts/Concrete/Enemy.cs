@@ -15,18 +15,13 @@ public class Enemy : MonoBehaviour, IDamageable<int>, IKillable, IAttack<int>
     public Animator enemyAnim;
 
     public int currentHealth;
-    public float currentWaterRate;
-    public float waterDecreaseRate = 10f; // Su azalma oranı
-
-    public HealthBar healthBar;
-    public BodyWaterRate waterRateBar;
 
     // public Player player;
 
     public LayerMask playerLayers;
     public float attackRange2 = 0.5f;
 
-    public Transform attackPoint3;
+    public Transform AttackPointEnemy;
 
     void Start()
     {
@@ -74,7 +69,7 @@ public class Enemy : MonoBehaviour, IDamageable<int>, IKillable, IAttack<int>
     public void EnemyFist()
     {
         enemyAnim.SetTrigger("Fist");
-        Collider[] hitPlayer1 = Physics.OverlapSphere(attackPoint3.position, attackRange2, playerLayers);
+        Collider[] hitPlayer1 = Physics.OverlapSphere(AttackPointEnemy.position, attackRange2, playerLayers);
 
         foreach (Collider player in hitPlayer1)
         {
@@ -85,7 +80,7 @@ public class Enemy : MonoBehaviour, IDamageable<int>, IKillable, IAttack<int>
     public void EnemyKick()
     {
         enemyAnim.SetTrigger("Kick");
-        Collider[] hitPlayer2 = Physics.OverlapSphere(attackPoint3.position, attackRange2, playerLayers);
+        Collider[] hitPlayer2 = Physics.OverlapSphere(AttackPointEnemy.position, attackRange2, playerLayers);
 
         foreach (Collider player in hitPlayer2)
         {

@@ -27,11 +27,11 @@ public class DetectionFight : MonoBehaviour
         {
             if (randomNumber < 60)
             {
-                FightInDetectionFight1();
+                FightInDetectionFist();
             }
             else
             {
-                FightInDetectionFight2();
+                FightInDetectionKick();
             }
         }
     }
@@ -52,7 +52,7 @@ public class DetectionFight : MonoBehaviour
         }
     }
 
-    public void FightInDetectionFight1()
+    public void FightInDetectionFist()
     {
         if (nextDamage <= DateTime.Now)
         {
@@ -61,7 +61,7 @@ public class DetectionFight : MonoBehaviour
         }
     }
 
-    public void FightInDetectionFight2()
+    public void FightInDetectionKick()
     {
         if (nextDamage <= DateTime.Now)
         {
