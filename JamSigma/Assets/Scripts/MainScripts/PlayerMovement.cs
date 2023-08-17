@@ -160,8 +160,8 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator FistAttackPlayer()
     {
-        anim.SetLayerWeight(anim.GetLayerIndex("FistAttackPlayer Layer"), 1);
-        anim.SetTrigger("Fist1");
+        anim.SetLayerWeight(anim.GetLayerIndex("PlayerFistAttackLayer"), 1);
+        anim.SetTrigger("PlayerFist1");
 
         isAttack1 = true;
         canAttack1 = false;
@@ -179,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(EnableAttack1(attackDuration));
 
         yield return new WaitForSeconds(0.9f);
-        anim.SetLayerWeight(anim.GetLayerIndex("FistAttackPlayer Layer"), 0);
+        anim.SetLayerWeight(anim.GetLayerIndex("PlayerFistAttackLayer"), 0);
     }
 
     private IEnumerator EnableAttack1(float duration2)
