@@ -108,19 +108,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Idle()
     {
-        anim.SetFloat("Speed", 0, 0.1f, Time.deltaTime);
+        anim.SetFloat("idleWalkRun", 0, 0.1f, Time.deltaTime);
     }
 
     private void Walk()
     {
         moveSpeed = walkSpeed;
-        anim.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+        anim.SetFloat("idleWalkRun", 0.5f, 0.1f, Time.deltaTime);
     }
 
     private void Run()
     {
         moveSpeed = runSpeed;
-        anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
+        anim.SetFloat("idleWalkRun", 1, 0.1f, Time.deltaTime);
     }
 
     private IEnumerator Jump()
@@ -161,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator FistAttackPlayer()
     {
         anim.SetLayerWeight(anim.GetLayerIndex("FistAttackPlayer Layer"), 1);
-        anim.SetTrigger("FistAttackPlayer");
+        anim.SetTrigger("Fist1");
 
         isAttack1 = true;
         canAttack1 = false;

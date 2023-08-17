@@ -47,12 +47,12 @@ public class EnemyController : MonoBehaviour
 
     void IdleAnimation()
     {
-        enemy.enemyAnim.SetTrigger("idle");
+        enemy.enemyAnim.SetTrigger("Idle");
     }
 
     void RunAnimation()
     {
-        enemy.enemyAnim.SetTrigger("run");
+        enemy.enemyAnim.SetTrigger("Run");
     }
 
     void PunchAnimation()
