@@ -17,4 +17,17 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject player;
 
+    public int currentHealth;
+    public float currentWaterRate;
+    public float waterDecreaseRate = 1f; // Su azalma oranı
+
+    public void Kill()
+    {
+        Debug.Log("Game Over");
+        // ölme animasyonu
+        Destroy(gameObject); // Bu şart olmayabilir
+        // LoadScene-GameOverScene
+    }
+
+    
 }
